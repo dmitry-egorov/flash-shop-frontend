@@ -1,3 +1,6 @@
 {
-  "name": "flash-shop-frontend"
+  "name": "flash-shop-frontend",
+  "root": "public",
+  "clean_urls": true,
+  "error_page": "error.html"
 }

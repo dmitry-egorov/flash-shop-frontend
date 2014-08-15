@@ -1,0 +1,47 @@
+body
+{
+    font-size: 12px;
+}
+
+div.shopping-area
+{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.products
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.products li
+{
+    float: left;
+    width: 480px;
+    height: 275px;
+    display: block;
+    border: 1px solid gray;
+    text-decoration: none;
+    margin: 2px;
+    padding:0;
+    position: relative;
+}
+
+ul.products li div.price-tag
+{
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    padding: 4px;
+    background: #000000;
+    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+    color: #d6d7d8;
+}
+
+ul.products li img
+{
+    width: 480px;
+}

@@ -4,9 +4,9 @@ shoppingAreaApp.controller('ProductsController', function ($scope)
 {
   $scope.products =
   [
-    {'img': 'starbound.jpg',      'priceText': '10$'},
-    {'img': 'civilization.jpg',   'priceText': '5$' },
-    {'img': 'road_not_taken.jpg', 'priceText': '10$'},
-    {'img': 'call_of_duty.jpg',   'priceText': '50$'}
+    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/211820/capsule_616x353.jpg', 'priceText': '10$'},
+    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/8930/capsule_616x353.jpg',   'priceText': '5$' },
+    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/293740/capsule_616x353.jpg', 'priceText': '10$'},
+    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/115300/capsule_616x353.jpg', 'priceText': '50$'}
   ];
 });

@@ -1,12 +1,27 @@
+var host = "http://intense-coast-7869.herokuapp.com/";
+
 var shoppingAreaApp = angular.module('shoppingAreaApp', []);
 
-shoppingAreaApp.controller('ProductsController', function ($scope)
+shoppingAreaApp.controller('ProductsController', function ($scope, $http)
 {
-  $scope.products =
-  [
-    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/211820/capsule_616x353.jpg', 'priceText': '10$'},
-    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/8930/capsule_616x353.jpg',   'priceText': '5$' },
-    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/293740/capsule_616x353.jpg', 'priceText': '10$'},
-    {'img': 'http://cdn.akamai.steamstatic.com/steam/apps/115300/capsule_616x353.jpg', 'priceText': '50$'}
-  ];
+    var responsePromise = $http.get(host + "products");
+
+    responsePromise.success(function (data) {
+        $scope.products = data.products.map(function(product)
+        {
+            var imgUrl = "http://cdn.akamai.steamstatic.com/steam/apps/" + product.imgId + "/capsule_616x353.jpg";
+            var price = "" + product.price.amount + "$";
+            var result =
+            {
+                img: imgUrl,
+                priceText: price
+            };
+
+            return result;
+        });
+    });
+
+    responsePromise.error(function () {
+        alert("AJAX failed!");
+    });
 });

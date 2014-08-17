@@ -1,5 +1,5 @@
 {
-  "name": "flash-shop-frontend",
+  "name": "flash-shop",
   "root": "public",
   "clean_urls": true,
   "error_page": "error.html"

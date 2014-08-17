@@ -1,12 +1,13 @@
-var host = "http://intense-coast-7869.herokuapp.com/";
+var host = "http://flash-shop-api.herokuapp.com/";
 
 var shoppingAreaApp = angular.module('shoppingAreaApp', []);
 
 shoppingAreaApp.controller('ProductsController', function ($scope, $http)
 {
-    var responsePromise = $http.get(host + "products");
+    var promise = $http.get(host + "/products");
 
-    responsePromise.success(function (data) {
+    promise.success(function (data)
+    {
         $scope.products = data.products.map(function(product)
         {
             var imgUrl = "http://cdn.akamai.steamstatic.com/steam/apps/" + product.imgId + "/capsule_616x353.jpg";
@@ -21,7 +22,8 @@ shoppingAreaApp.controller('ProductsController', function ($scope, $http)
         });
     });
 
-    responsePromise.error(function () {
+    promise.error(function ()
+    {
         alert("AJAX failed!");
     });
 });

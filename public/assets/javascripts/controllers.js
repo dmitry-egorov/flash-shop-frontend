@@ -1,4 +1,4 @@
-var host = "http://flash-shop-api.herokuapp.com/";
+var host = "http://flash-shop-api.herokuapp.com";
 
 var shoppingAreaApp = angular.module('shoppingAreaApp', []);
 

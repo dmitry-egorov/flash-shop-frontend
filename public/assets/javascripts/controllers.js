@@ -12,13 +12,11 @@ shoppingAreaApp.controller('ProductsController', function ($scope, $http)
         {
             var imgUrl = "http://cdn.akamai.steamstatic.com/steam/apps/" + product.imgId + "/capsule_616x353.jpg";
             var price = "" + product.price.amount + "$";
-            var result =
-            {
+
+            return {
                 img: imgUrl,
                 priceText: price
             };
-
-            return result;
         });
     });
 
